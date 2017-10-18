@@ -1,0 +1,102 @@
+//_bar_chart.scss
+
+.bar-chart__container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.bar-chart{
+  border-spacing: 10px 5px;
+  margin:50px;
+}
+
+.bar-chart__title{
+  margin-bottom:10px;
+  padding:5px;
+}
+
+
+.bar-chart__bar,.bar-chart__y-label{
+  padding:0px 15px 15px 0px;
+  vertical-align:top;
+  width:32px;
+}
+
+.bar-chart__bar{
+  -webkit-transition:all .1s ease;
+  border-radius: 3px;
+  opacity:.85;
+  position:relative;
+  transition:all .1s ease;
+  &:hover{
+    opacity:1;
+  }
+  &:hover > .tooltip{
+    visibility:visible; //todo move this to custom sheet, decouple somehow
+  }
+}
+
+.bar-chart__bar--blank{
+  background-color:transparent;
+}
+
+.bar-chart__x-data{
+  -webkit-transform:rotate(55deg);
+  left:14px;
+  position:relative;
+  transform:rotate(55deg);
+  white-space: nowrap;
+  width:0px;
+}
+
+/****************************************************
+Custom .bar-chart defaults located at _bar_chart.scss
+ ****************************************************/
+
+
+.bar-chart--frontend-chart {
+ @extend .bar-chart;
+}
+
+.bar-chart__title--frontend{
+  @extend .bar-chart__title;
+  color:site-colors('primary');
+}
+
+.bar-chart__bar--frontend{
+  @extend .bar-chart__bar;
+  background-color:site-colors('primary');
+}
+
+.bar-chart--backend-chart {
+ @extend .bar-chart;
+}
+
+.bar-chart__title--backend{
+  @extend .bar-chart__title;
+  color:site-colors('secondary');
+}
+
+.bar-chart__bar--backend{
+  @extend .bar-chart__bar;
+  background-color:site-colors('secondary');
+}
+
+.bar-chart--other-chart{
+  @extend .bar-chart;
+}
+
+.bar-chart__bar--other{
+  @extend .bar-chart__bar;
+  background-color:site-colors('accent');
+}
+
+.bar-chart__title--other{
+  @extend .bar-chart__title;
+  color:site-colors('accent');;
+}
+
+
+

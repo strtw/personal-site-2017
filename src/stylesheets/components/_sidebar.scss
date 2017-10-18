@@ -1,0 +1,28 @@
+.sidebar{
+  width:27px;
+  height:200px;
+  background-color: #4484c4;
+  position:absolute;
+  top:200px;
+  left:0px;
+  border-top-right-radius:3px;
+  border-bottom-right-radius:3px;
+  z-index:10;
+  @media screen and (max-width:800px) {
+    display:none;
+  }
+}
+
+.sideBar__list{
+}
+
+.sideBar__item{
+  margin-top:20px;
+  margin-left:-10px;
+  font-size:1.5em;
+  color:site-colors("light-font");
+}
+
+.sideBar--scrollSpyActive{
+  color:site-colors("accent");
+}

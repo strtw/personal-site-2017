@@ -1,0 +1,150 @@
+
+/*Using BEM naming convention*/
+
+.digital-card{
+  -webkit-perspective:1000px;
+  perspective:1000px;
+  -webkit-perspective-origin: 50%;
+  perspective-origin: 50%;
+}
+
+.digital-card__card{
+  margin:50px;
+  position:relative;
+  font-family: 'Roboto', sans-serif;
+  color:white;
+  font-weight:300;
+  border-radius:2px;
+  max-width:80%;
+  width: 560px;
+  height: 340px;
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  -webkit-transition:-webkit-transform 2s;
+  transition:-webkit-transform 2s;
+  transition:transform 2s;
+  transition:transform 2s, -webkit-transform 2s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+
+.digital-card__card--back, .digital-card__card--front{
+  -webkit-backface-visibility: hidden;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%
+}
+
+.digital-card__card--front{
+  background-image: url("../images/bg3.png");
+  background-position: center center;
+  background-size: cover;
+  border-radius:2px;
+}
+
+.digital-card__card--back{
+  background:url("../images/siena.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  border-radius:2px;
+}
+
+.digital-card__toggle:checked + .digital-card__card
+{
+  -webkit-transform:rotateX(179.9deg);
+  transform:rotateX(179.9deg);
+}
+
+.digital-card__card:hover {
+  -webkit-transition:1s;
+  transition: 1s;
+  -webkit-transform:rotateX(20deg);
+  transform:rotateX(20deg);
+  box-shadow: 0 5px 35px -2px #333;
+}
+
+.digital-card__toggle:checked ~ .digital-card__card:hover {
+  -webkit-transform:rotateX(160deg);
+  transform:rotateX(160deg);
+  box-shadow: 0px 6px 35px -2px #FFFFFF;
+}
+
+.digital-card__toggle{
+  visibility:hidden;
+}
+
+.digital-card__social-footer{
+  position:absolute;
+  top:270px;
+  right:0px;
+  display:inline-block;
+  width:200px;
+}
+
+.digital-card__social-icons{
+  margin-left:18px;
+}
+
+.digital-card__encyclopedia{
+  position:absolute;
+  top:270px;
+  left:28px;
+  width:200px;
+}
+
+.digital-card__encyclopedia-icon{
+  float:left;
+}
+
+.digital-card__encyclopedia-text{
+  float:left;
+  margin-top:3px;
+  margin-left:3px;
+}
+
+.digital-card__fa-retweet{
+  position:absolute;
+  top:28px;
+  right:28px;
+  color:white;
+}
+
+.digital-card__bio-container{
+  margin-left:32px;
+  margin-top:41px;
+}
+
+
+.digital-card__bio-text{
+
+}
+
+.digital-card__header{
+  font-weight: 300;
+  display: inline;
+  margin: 0 0 2px 0;
+  padding-bottom: 0px;
+  font-size: 2.3em;
+  text-transform: capitalize;
+  position: relative;
+  left: 0;
+  border: none;
+}
+
+.digital-card__sub-header{
+  padding-top:0px;
+  margin-top:0px;
+  font-weight:300;
+}
+
+
+.digital-card__contact-info{
+  margin-top:40px;
+  font-weight:400;
+}

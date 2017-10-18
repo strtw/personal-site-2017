@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/33b204a1d5.js"></script>
+
+    <!--link rel="stylesheet"
+          href="http://meyerweb.com/eric/tools/css/reset/reset.css"/-->
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt|Lato|Open+Sans:300|Playfair+Display|Raleway|Josefin-Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Rock+Salt" rel="stylesheet">
+    <link href="https://necolas.github.io/normalize.css/5.0.0/normalize.css" rel="stylesheet">
+    <!--Gulp plugin gulp-html-replace used below-->
+    <!-- build:css -->
+    <link href="../stylesheets/main.css" rel="stylesheet">
+    <!-- endbuild -->
+    <title>Title</title>
+</head>
+<body>
+
+    <header class="header">
+
+        <nav class="nav">
+            <div class="menu">
+                <input type="checkbox" class="menu__hamburger-control"
+                       id="hamburger-control"/>
+                <label class="menu__backdrop-right" for="hamburger-control"></label>
+                <li class="menu__hamburger">
+                    <label for="hamburger-control">
+                        <i class="fa fa-bars fa-5x menu__hamburger-icon"
+                           aria-hidden="true"></i></label>
+                </li>
+                <ul class="menu__container">
+                    <li class="menu__item"><h2
+                            class="header__title">Stu
+                        Wood</h2></li>
+                    <li class="menu__item"><a href="#about">About</a></li>
+                    <li class="menu__item">
+                        <!--<label for="sub">--><a href="#projects">Projects
+                            </a><!--</label>--> <!--
+                                 TODO add s
+                        conditional class when menu is in fly-out mode <a href="#projects">-->
+                    </li>
+                    <input type="checkbox" id="sub"
+                           class="menu__submenu-control"/>
+                    <ul class="menu__submenu">
+                        <li class="menu__submenu-item>Button Web Component</li>
+                        <li class="menu__submenu-item>Profiles Sidebar</li>
+                        <li class="menu__submenu-item>Forms & Inputs</li>
+                        <li class="menu__submenu-item>Calculator</li>
+                        <li class="menu__submenu-item>UI Clone</li>
+                        <li class="menu__submenu-item>Product Listing</li>
+                        <li class="menu__submenu-item>Accordion</li>
+                        <li class="menu__submenu-item>Tab Component</li>
+                        <li class="menu__submenu-item>Image Gallery</li>
+                        <li class="menu__submenu-item>Business Card</li>
+                    </ul>
+                    <li class="menu__item"><a href="#skills">Skills</a></li>
+                    <li
+                            class="menu__item"><a href="#contact-section">
+                        Contact</a></li>
+                    </li>
+                    <li class="menu__item no-scroll">
+                        <div class="modal-search">
+                            <input id="search-bar" class="modal-search__search-bar"
+                                   type="text"/>
+                            <label for="open-modal"><i
+                                    class="fa fa-search modal-search__search-icon" aria-hidden="true"></i></label>
+                        </div>
+                    </li>
+
+                    <footer class="menu__footer">
+                        © 2016 Stu Wood - All Rights Reserved.
+                    </footer>
+                </ul>
+            </div>
+            <!--Modal search component placed here so
+            modal-search__background width is relative to nav width-->
+            <input type="radio" name="modal-search" id="open-modal"
+                   class="modal-search__open-control">
+            <input type="radio" id="close-modal" name="modal-search"
+                   class="modal-search__close-control"
+                   checked/>
+            <div class="modal-search__background">
+                <div class="modal-search__display"><span
+                        class="modal-search__message">I'm sorry
+                        but
+                        I'm afraid I can't do that...search is temporarily
+                        disabled</span><label
+                        class="modal-search__close-btn" for="close-modal">
+                </label>
+                    <div class="modal-search__device-width--first"></div>
+                    <div class="modal-search__device-width--second"></div>
+                    <div class="modal-search__device-width--third"></div>
+                </div>
+            </div>
+
+
+        </nav>
+    </header>
+
+        <aside class="sidebar">
+            <ul class="sideBar__list">
+                <a href="#about"><li class="sideBar__item"></li></a>
+                <a href="#projects"><li class="sideBar__item"></li></a>
+                <a href="#skills"><li class="sideBar__item"></li></a>
+                <a href="#contact-section"><li class="sideBar__item"></li></a>
+            </ul>
+        </aside>
+
+        <section id="about" class="about content__section" data-target="scroll">
+            <h1 class="about__title">About</h1>
+            <div class="section-content">
+                I am a frontend developer who is currently enrolled
+                    full-time as a student at Bov Academy. I first
+                    became interested in frontend development and
+                    information design while developing web-based business
+                    intelligence dashboards for a software startup with the
+                    company's engineering team. I soon moved into a role at another company where I headed up digital marketing and web development. This position only increased my desire to understand as much as I could about the web.
+                <br>
+                <br>
+               I am eager to begin studying backend development after I
+                graduate from Bov Academy's frontend program. When I'm not at my
+                laptop I can be found gardening at my community plot, surfing, or experimenting in the kitchen.
+            </div>
+        </section>
+        <section id="projects" class="projects content__section" data-target="scroll">
+           <!-- <a name="projects"></a> -->
+            <h1 class="projects__title">Projects</h1>
+            <!--Tab Area -->
+                <div class="tab">
+                    <input class="tab__control" type="radio" name="tabs"
+                            id="button-web-component" checked/>
+                    <label class="tab__label" for="button-web-component">Button
+                    Web
+                        Component</label>
+                    <div class="carousel">
+                        <div class="carousel__container">
+                            <input class="carousel__slider-control" type="radio"
+                                   name="button-web-component" id="button1" checked/>
+                                <div class="carousel__slider-content">
+                                        <p class="carousel__slider-paragraph">In this project I wrote the
+                                            ruleset(s) that would style all elements with the button class
+                                            to be visually and functionally identical. I enjoyed learning about how sub-classes could modify style applied with parent classes, and the basics of pseudo-selectors.
+                                        </p>
+                                </div>
+
+                            <input class="carousel__slider-control" type="radio" name="button-web-component"
+                                    id="button2"/>
+                            <img class="carousel__slider-image"
+                                 src="../images/web-component-buttons.gif">
+                            <input class="carousel__slider-control"
+                                         type="radio"
+                                        name="button-web-component" id="button3"/>
+                            <img class="carousel__slider-image"
+                                 src="../images/buttons.png">
+
+                            <label for="button3"
+                                   class="carousel__control-1 carousel__previous-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i></label>
+                            <label for="button2"
+                                   class="carousel__control-1 carousel__next-btn"><i
+                                    class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="button1"
+                                   class="carousel__control-2 carousel__previous-btn"><i class="fa fa-chevron-left " aria-hidden="true"></i></label>
+                            <label for="button3"
+                                   class="carousel__control-2 carousel__next-btn"><i
+                                    class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="button2"
+                                   class="carousel__control-3 carousel__previous-btn"><i class="fa fa-chevron-left " aria-hidden="true"></i></label>
+                            <label for="button1"
+                                   class="carousel__control-3 carousel__next-btn"><i
+                                    class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <div class="carousel__container-caption">
+                                <p><span class="carousel__caption-heading">
+                                    Technologies:</span>
+                                    HTML5, CSS3.</p>
+                                <p> <span class="carousel__github-source"><i class="fa fa-github fa-2" aria-hidden="true"></i>
+                                    Source</span> |
+                                    <a href="http://strtw.github.io/learning-web-components/components/buttons/">Demo</a></p>
+                            </div>
+                            <div class="carousel__bullet-container">
+                                <label for="button1" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="button2" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="button3" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <input class="tab__control"  type="radio" name="tabs"
+                           id="profiles-sidebar"/>
+                    <label class="tab__label" for="profiles-sidebar">Profiles
+                        Sidebar</label>
+                    <div class="carousel">
+                        <div class="carousel__container">
+                            <input class="carousel__slider-control"
+                                    type="radio" name="profiles-sidebar"
+                                   id="profiles-button1" checked/>
+                            <div class="carousel__slider-content">
+                                    <p class="carousel__slider-paragraph">This was one of the first projects
+                                        that familiarized us with how to design and implement layouts.  Our instructions were to use HTML and CSS to
+                                        customize an informative profile card to be used on a Modern Developer website. In this project I took the opportunity to implement the layout with floats.
+                                    </p>
+                            </div>
+
+                            <input class="carousel__slider-control" type="radio" name="profiles-sidebar"
+                                    id="profiles-button2"/>
+
+                            <img class="carousel__slider-image"
+                                 src="../images/profiles-full.png">
+                            <input class="carousel__slider-control"
+                                   type="radio" name="profiles-sidebar"
+                                   id="profiles-button3"/>
+                            <img class="carousel__slider-image"
+                                 src="../images/profiles-top.png">
+
+                            <label for="profiles-button3"
+                                   class="control-1-profiles carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="profiles-button2"
+                                   class="control-1-profiles carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="profiles-button1"
+                                   class="control-2-profiles carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="profiles-button3"
+                                   class="control-2-profiles carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="profiles-button2"
+                                   class="control-3-profiles carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="profiles-button1"
+                                   class="control-3-profiles carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <div class="carousel__container-caption">
+                                <p><span class="carousel__caption-heading">Technologies:</span>
+                                    HTML5, CSS3.</p>
+                                <p> <span class="carousel__github-source"><i class="fa fa-github fa-2" aria-hidden="true"></i>
+                                    Source</span> |
+                                    <a href="http://moderndeveloper-students.github.io/coursework-strtw/introduction-to-javascript-and-modern-web-development/introduction-to-css/project-3-profiles-sidebar/index.html">Demo</a></p>
+                            </div>
+                            <div class="carousel__bullet-container">
+                                <label for="profiles-button1"
+                                       class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="profiles-button2"
+                                       class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="profiles-button3"
+                                       class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <input class="tab__control" type="radio" name="tabs" id="forms"/>
+                    <label class="tab__label" for="forms">Forms and
+                        Inputs</label>
+                    <div class="carousel">
+                        <div class="carousel__container">
+                            <input class="carousel__slider-control"
+                                   type="radio" name="forms"
+                                   id="forms-button1" checked/>
+                            <div class="carousel__slider-content">
+                                    <p class="carousel__slider-paragraph">These projects were part of our
+                                        introductory CSS courses. I was able to familiarize myself with CSS and how styles are applied. Additionally, I utilized a JS validation library I wrote.
+                                    </p>
+                            </div>
+
+                            <input class="carousel__slider-control"
+                                   type="radio" name="forms"
+                                   id="forms-button2"/>
+                            <img class="carousel__slider-image"
+                                 src="../images/color-builder.gif">
+
+                            <input class="carousel__slider-control"
+                                   type="radio" name="forms"
+                                   id="forms-button3"/>
+                            <img class="carousel__slider-image"
+                                 src="../images/login-form.gif">
+
+                            <input class="carousel__slider-control"
+                                   type="radio" name="forms"
+                                   id="forms-button4"/>
+                            <img class="carousel__slider-image"
+                                 src="../images/signup.gif" height="350"
+                                 width="266">
+
+                            <input class="carousel__slider-control"
+                                   type="radio" name="forms"
+                                   id="forms-button5"/>
+                            <img class="carousel__slider-image"
+                                 src="../images/credit-debit.gif">
+
+                            <input class="carousel__slider-control"
+                                   type="radio" name="forms"
+                                   id="forms-button6"/>
+                            <img class="carousel__slider-image"
+                                  src="../images/shipping-billing.gif"
+                                  height="350" width="241">
+
+                            <input class="carousel__slider-control"
+                                   type="radio" name="forms"
+                                   id="forms-button7"/>
+                            <img class="carousel__slider-image"
+                                 src="../images/survey.png" height="350" width="241">
+
+                            <label for="forms-button7"
+                                   class="control-1-forms carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="forms-button2"
+                                   class="control-1-forms carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="forms-button1"
+                                   class="control-2-forms carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="forms-button3"
+                                   class="control-2-forms carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="forms-button2"
+                                   class="control-3-forms carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="forms-button4"
+                                   class="control-3-forms carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="forms-button3"
+                                   class="control-4-forms carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="forms-button5"
+                                   class="control-4-forms carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="forms-button4"
+                                   class="control-5-forms carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="forms-button6"
+                                   class="control-5-forms carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="forms-button5"
+                                   class="control-6-forms carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="forms-button7"
+                                   class="control-6-forms carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="forms-button6"
+                                   class="control-7-forms carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="forms-button1"
+                                   class="control-7-forms carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <div class="carousel__container-caption">
+                                <p><span class="carousel__caption-heading">
+                                    Technologies:</span>
+                                    HTML5, CSS3, JavaScript</p>
+                                <p> <span class="carousel__github-source"><i class="fa fa-github fa-2" aria-hidden="true"></i>
+                                    Source</span> |
+                                    <a href="http://moderndeveloper-students.github.io/coursework-strtw/introduction-to-javascript-and-modern-web-development/introduction-to-css/project-1-multi-page-site/forms.html">Demo</a></p>
+                            </div>
+                            <div class="carousel__bullet-container">
+                                <label for="forms-button1"
+                                       class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="forms-button2"
+                                       class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="forms-button3"
+                                       class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="forms-button4"
+                                       class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="forms-button5"
+                                       class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="forms-button6"
+                                       class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="forms-button7"
+                                       class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <input class="tab__control" type="radio" name="tabs"
+                           id="calculator"/>
+                    <label class="tab__label" for="calculator">Calculator</label>
+                    <div class="carousel">
+                        <div class="carousel__container">
+                            <input class="carousel__slider-control" type="radio" name="calc" id="calc-button1" checked/>
+                            <div class="carousel__slider-content">
+                                    <p class="carousel__slider-paragraph">This project was the first where I
+                                        applied functionality with vanilla JS to my hand-coded HTML / CSS framework. It provided an opportunity learn how to pass and manipulate user input data and display it back to the user. Later I went back and refactored the framework to be more responsive.
+                                    </p>
+                            </div>
+                            <input class="carousel__slider-control" type="radio" name="calc" id="calc-button2"/>
+
+                            <img class="carousel__slider-image"
+                                 src="../images/calculator.gif" width="254" height="350">
+                            <input class="carousel__slider-control" type="radio" name="calc" id="calc-button3"/>
+                            <img class="carousel__slider-image"
+                                  src="http://placehold.it/150x300">
+
+                            <label for="calc-button3" class="control-1-calc carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="calc-button2" class="control-1-calc carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="calc-button1" class="control-2-calc carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="calc-button3" class="control-2-calc carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="calc-button2" class="control-3-calc carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="calc-button1" class="control-3-calc carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <div class="carousel__container-caption">
+                                <p><span class="carousel__caption-heading">Technologies:</span>
+                                    HTML5, CSS3, JavaScript</p>
+                                <p> <span class="carousel__github-source"><i class="fa fa-github fa-2" aria-hidden="true"></i>
+                                    Source</span> |
+                                    <a href="http://moderndeveloper-students.github.io/coursework-strtw/introduction-to-javascript-and-modern-web-development/introduction-to-css/Project-Assignment-5/Calculator/index.html">Demo</a></p>
+                            </div>
+                            <div class="carousel__bullet-container">
+                                <label for="calc-button1" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="calc-button2" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="calc-button3" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <input class="tab__control" type="radio" name="tabs"
+                    id="ui-clone"/>
+                    <label class="tab__label" for="ui-clone">UI Clone</label>
+                    <div class="carousel">
+                        <div class="carousel__container">
+                            <input class="carousel__slider-control" type="radio" name="ui-clone" id="ui-button1" checked/>
+                            <div class="carousel__slider-content">
+                                    <p class="carousel__slider-paragraph">In this project I and my teammate
+                                        were given the task to reproduce the desktop view of a website to pixel perfection. I learned much about layout and gained valuable experience in applying styles of varying specificity.
+                                    </p>
+                            </div>
+
+                            <input class="carousel__slider-control" type="radio" name="ui-clone" id="ui-button2"/>
+
+                            <img class="carousel__slider-image"
+                                    src="../images/encyclopedia-profiles.png"/>
+                            <input class="carousel__slider-control" type="radio" name="ui-clone" id="ui-button3"/>
+                            <img class="carousel__slider-image"
+                                 src="../images/encyclopedia-profiles.gif"/>
+
+                            <label for="ui-button3" class="control-1-ui carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="ui-button2" class="control-1-ui carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="ui-button1" class="control-2-ui carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="ui-button3" class="control-2-ui carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="ui-button2" class="control-3-ui carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="ui-button1" class="control-3-ui carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <div class="carousel__container-caption">
+                                <p><span class="carousel__caption-heading">Technologies:</span>
+                                    HTML5, CSS3</p>
+                                <p> <span class="carousel__github-source"><i class="fa fa-github fa-2" aria-hidden="true"></i>
+                                    Source</span> |
+                                    <a href="http://btmbtm.github.io/MD-Encyclopedia-Profiles/">Demo</a></p>
+                            </div>
+                            <div class="carousel__bullet-container">
+                                <label for="ui-button1" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="ui-button2" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="ui-button3" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <input class="tab__control" type="radio" name="tabs"
+                           id="product-listing"/>
+                    <label class="tab__label" for="product-listing">Product Listing</label>
+                    <div class="carousel">
+                        <div class="carousel__container">
+                            <input class="carousel__slider-control" type="radio" name="product-listing" id="product-button1" checked/>
+                            <div class="carousel__slider-content">
+                                    <p class="carousel__slider-paragraph">The product listing project gave me
+                                        the opportunity to develop an e-commerce store and shopping cart. Through trial and error, I learned how to generate page content dynamically with JavaScript, reason about data models, and the importance of keeping functions small and modular.
+                                    </p>
+                            </div>
+
+                            <input class="carousel__slider-control" type="radio" name="product-listing" id="product-button2"/>
+
+                            <img class="carousel__slider-image"
+                                 src="../images/cart-item.png">
+                            <input class="carousel__slider-control" type="radio" name="product-listing" id="product-button3"/>
+                            <img class="carousel__slider-image"
+                                 src="../images/shopping-cart.gif"/>
+
+                            <label for="product-button3" class="control-1-product carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="product-button2" class="control-1-product carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="product-button1" class="control-2-product carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="product-button3" class="control-2-product carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="product-button2" class="control-3-product carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="product-button1" class="control-3-product carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <div class="carousel__container-caption">
+                                <p><span class="carousel__caption-heading">Technologies:</span>
+                                    HTML5, CSS3, JavaScript</p>
+                                <p> <span class="carousel__github-source"><i class="fa fa-github fa-2" aria-hidden="true"></i>
+                                    Source</span> |
+                                    <a href="http://moderndeveloper-students.github.io/coursework-strtw/introduction-to-javascript-and-modern-web-development/introduction-to-css/Project-Assignment-6-Product-Listing-Page/shopping-cart.html">Demo</a></p>
+                            </div>
+                            <div class="carousel__bullet-container">
+                                <label for="product-button1" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="product-button2" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="product-button3" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <input class="tab__control" type="radio" name="tabs" id="accordion"/>
+                    <label class="tab__label" for="accordion">Accordion</label>
+                    <div class="carousel">
+                        <div class="carousel__container">
+                            <input class="carousel__slider-control" type="radio" name="accordion" id="accordion-button1" checked/>
+                            <div class="carousel__slider-content">
+                                    <p class="carousel__slider-paragraph">In this project I learned how dynamic
+                                        UIs can be created only using CSS3 and HTML5, which reduces reliance on JavScript and can improve page performance. Later I refactored the code to make the project more responsive.
+                                    </p>
+                            </div>
+
+                            <input class="carousel__slider-control" type="radio" name="accordion" id="accordion-button2"/>
+
+                            <img class="carousel__slider-image"
+                                 src="../images/accordion.png">
+                            <input class="carousel__slider-control" type="radio" name="accordion" id="accordion-button3"/>
+                            <img class="carousel__slider-image"
+                                 src="../images/accordion.gif" height="350" width="223">
+
+                            <label for="accordion-button3" class="control-1-accordion carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="accordion-button2" class="control-1-accordion carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="accordion-button1" class="control-2-accordion carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="accordion-button3" class="control-2-accordion carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="accordion-button2" class="control-3-accordion carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="accordion-button1" class="control-3-accordion carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <div class="carousel__container-caption">
+                                <p><span class="carousel__caption-heading">Technologies:</span>
+                                    HTML5, CSS3</p>
+                                <p> <span class="carousel__github-source"><i class="fa fa-github fa-2" aria-hidden="true"></i>
+                                    Source</span> |
+                                    <a href="http://moderndeveloper-students.github.io/coursework-strtw/mastering-javascript-and-modern-web-development/mastering-css/projects/project-2-accordion/index.html">Demo</a></p>
+                            </div>
+                            <div class="carousel__bullet-container">
+                                <label for="accordion-button1" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="accordion-button2" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="accordion-button3" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <input class="tab__control" type="radio" name="tabs"
+                           id="tab-comp"/>
+                    <label class="tab__label" for="tab-comp">Tab
+                        Component</label>
+                    <div class="carousel">
+                            <input class="carousel__slider-control" type="radio" name="tab-component" id="tab-button1" checked/>
+                            <div class="carousel__slider-content">
+                                <p class="carousel__slider-paragraph">In
+                                        this
+                                        project I
+                                        used the
+                                        checkbox hack to create a tab component. I learned how labels can be used to select inputs and applied conditional CSS styling.
+                                    </p>
+                            </div>
+
+                            <input class="carousel__slider-control" type="radio" name="tab-component" id="tab-button2"/>
+
+                            <img class="carousel__slider-image" src="../images/tabs.png">
+                            <input class="carousel__slider-control" type="radio" name="tab-component" id="tab-button3"/>
+                            <img class="carousel__slider-image" src="../images/tabs.gif">
+
+                            <label for="tab-button3" class="control-1-tab carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="tab-button2" class="control-1-tab carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="tab-button1" class="control-2-tab carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="tab-button3" class="control-2-tab carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="tab-button2" class="control-3-tab carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="tab-button1" class="control-3-tab carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <div class="carousel__container-caption">
+                                <p><span class="carousel__caption-heading">Technologies:</span>
+                                    HTML5, CSS3</p>
+                                <p> <span class="carousel__github-source"><i class="fa fa-github fa-2" aria-hidden="true"></i>
+                                    Source</span> |
+                                    <a href="http://moderndeveloper-students.github.io/coursework-strtw/mastering-javascript-and-modern-web-development/mastering-css/projects/project-1-tabs/index.html">Demo</a></p>
+                            </div>
+                            <div class="carousel__bullet-container">
+                                <label for="tab-button1" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="tab-button2" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="tab-button3" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                            </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <input class="tab__control" type="radio" name="tabs" id="image-gallery"/>
+                    <label class="tab__label" for="image-gallery">Image
+                        Gallery</label>
+                    <div class="carousel">
+                        <div class="carousel__container">
+                            <input class="carousel__slider-control" type="radio" name="image-gallery" id="gallery-button1" checked/>
+                            <div class="carousel__slider-content">
+                                    <p class="carousel__slider-paragraph">In this project I expanded on what I
+                                        had learned in the tab component project and used the checkbox hack to create a tabbed image gallery. I later went back and made the project responsive.
+                                    </p>
+                            </div>
+
+                            <input class="carousel__slider-control" type="radio" name="image-gallery" id="gallery-button2"/>
+
+                            <img class="carousel__slider-image"
+                                 src="../images/image-gallery.png">
+                            <input class="carousel__slider-control" type="radio" name="image-gallery" id="gallery-button3"/>
+                            <img class="carousel__slider-image"
+                                 src="../images/image-gallery.gif" width="437" height="350">
+
+                            <label for="gallery-button3" class="control-1-gallery carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="gallery-button2" class="control-1-gallery carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="gallery-button1" class="control-2-gallery carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="gallery-button3" class="control-2-gallery carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="gallery-button2" class="control-3-gallery carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="gallery-button1" class="control-3-gallery carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <div class="carousel__container-caption">
+                                <p><span class="carousel__caption-heading">Technologies:</span>
+                                    HTML5, CSS3</p>
+                                <p> <span class="carousel__github-source"><i class="fa fa-github fa-2" aria-hidden="true"></i>
+                                    Source</span> |
+                                    <a href="http://moderndeveloper-students.github.io/coursework-strtw/mastering-javascript-and-modern-web-development/mastering-css/projects/project-4-image-gallery/index.html">Demo</a></p>
+                            </div>
+                            <div class="carousel__bullet-container">
+                                <label for="gallery-button1" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="gallery-button2" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="gallery-button3" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <input class="tab__control" type="radio" name="tabs" id="biz-card"/>
+                    <label class="tab__label" for="biz-card">Business
+                        Card</label>
+                    <div class="carousel">
+                        <div class="carousel__container">
+                            <input class="carousel__slider-control" type="radio" name="biz-card" id="bizcard-button1" checked/>
+                            <div class="carousel__slider-content">
+                                    <p class="carousel__slider-paragraph">In this
+                                        project I learned
+                                        how to
+                                        apply CSS3 transitions and transformations to achieve animation effects. I used several online tutorials to understand the concepts and then applied what I learned to the project.
+                                    </p>
+                            </div>
+
+                            <input class="carousel__slider-control" type="radio" name="biz-card" id="bizcard-button2"/>
+
+                            <img class="carousel__slider-image" src="../images/business-card.png">
+                            <input class="carousel__slider-control" type="radio" name="biz-card" id="bizcard-button3"/>
+                            <img class="carousel__slider-image"
+                                 src="../images/business-card.gif">
+
+                            <label for="bizcard-button3" class="control-1-bizcard carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="bizcard-button2" class="control-1-bizcard carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="bizcard-button1" class="control-2-bizcard carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="bizcard-button3" class="control-2-bizcard carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <label for="bizcard-button2" class="control-3-bizcard carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
+                            <label for="bizcard-button1" class="control-3-bizcard carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
+                            <div class="carousel__container-caption">
+                                <p><span class="carousel__caption-heading">Technologies:</span>
+                                    HTML5, CSS3</p>
+                                <p> <span class="carousel__github-source"><i class="fa fa-github fa-2" aria-hidden="true"></i>
+                                    Source</span> |
+                                    <a href="#contact-section">Demo</a></p>
+                            </div>
+                            <div class="carousel__bullet-container">
+                                <label for="bizcard-button1" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="bizcard-button2" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                                <label for="bizcard-button3" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!--End Tab Area -->
+        </section>
+        <section id="skills" class="skills content__section" data-target="scroll">
+        <h1 class="skills__title">Development Skills</h1>
+            <div class="section-content">
+            I am most skilled at frontend development. However after completing my frontend track, I will immediately begin Modern Developer's full-stack career track.
+            </div>
+            <div class="skills-bar">
+                <div class="skills-bar__frontend">90%</div>
+                <div class="skills-bar__backend">10%</div>
+            </div>
+        <div class="bar-chart__container">
+                <table class="bar-chart--frontend-chart">
+                    <tbody>
+                    <caption
+                            class="bar-chart__title--frontend"><h3>Frontend
+                    </h3></caption>
+                    <tr>
+                        <td class="bar-chart__y-label">Expert</td>
+                    </tr>
+                    <tr>
+                        <td class="bar-chart__y-label">Proficient</td>
+                        <td class="bar-chart__bar--frontend first-bar" rowspan="3"><div
+                                class="tooltip">Proficient</div></td>
+                        <td class="bar-chart__bar--frontend second-bar" rowspan="3"><div
+                                class="tooltip">Proficient</div></td>
+                        <td class="bar-chart__bar--frontend--blank"></td>
+                        <td class="bar-chart__bar--frontend fourth-bar" rowspan="3"><div
+                                class="tooltip">Proficient</div></td>
+                    </tr>
+                    <tr>
+                        <td class="bar-chart__y-label">Competent</td>
+                        <td class="bar-chart__bar--frontend third-bar" rowspan="2"><div
+                                class="tooltip">Competent</div></td>
+                        <td class="bar_chart__bar--blank"></td>
+
+                    </tr>
+                    <tr>
+                        <td class="bar-chart__y-label">Learning</td>
+                        <td class="bar-chart__bar--frontend fifth-bar"><div class="tooltip">Learning</div></td>
+                        <td class="bar-chart__bar--frontend sixth-bar"><div class="tooltip">Learning</div></td>
+                    </tr>
+                    <tr>
+                        <td class="bar-chart__y-label"></td>
+                        <td
+                                class="bar-chart__x-label"><div class="bar-chart__x-data">
+                            JavaScript</div></td>
+                        <td
+                                class="bar-chart__x-label"><div class="bar-chart__x-data">HTML5
+                            /CSS3</div></td>
+                        <td class="bar-chart__x-label"><div class="bar-chart__x-data">jQuery
+                        </div></td>
+                        <td class="bar-chart__x-label"><div class="bar-chart__x-data">UX/UI
+                            Design</div></td>
+                        <td class="bar-chart__x-label"><div class="bar-chart__x-data">React
+                        </div></td>
+                        <td
+                                class="bar-chart__x-label"><div class="bar-chart__x-data">SASS
+                        </div></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                <table class="bar-chart--backend-chart">
+                    <tbody>
+                    <caption
+                            class="bar-chart__title--backend"><h3>Backend</h3>
+                    </caption>
+                    <tr>
+                        <td class="bar-chart__y-label">Expert</td>
+                    </tr>
+                    <tr>
+                        <td class="bar-chart__y-label">Proficient</td>
+                    </tr>
+                    <tr>
+                        <td class="bar-chart__y-label">Competent</td>
+
+                    </tr>
+                    <tr>
+                        <td class="bar-chart__y-label">Learning</td>
+                        <td class="bar-chart__bar--backend first-bar"><div
+                                class="tooltip">Learning</div></td>
+                        <td class="bar-chart__bar--backend second-bar"><div
+                                class="tooltip">Learning</div></td>
+                        <td class="bar-chart__bar--backend third-bar"><div
+                                class="tooltip">Learning</div></td>
+                        <td class="bar-chart__bar--backend fourth-bar"><div
+                                class="tooltip">Learning</div></td>
+                    </tr>
+                    <tr>
+                        <td class="bar-chart__y-label"></td>
+                        <td class="bar-chart__x-label"><div
+                                class="bar-chart__x-data class=bar-chart__x-data">mySQL
+                        </div></td>
+                        <td
+                                class="bar-chart__x-label"><div
+                                class="bar-chart__x-data class=bar-chart__x-data">MongoDB
+                        </div></td>
+                        <td
+                                class="bar-chart__x-label"><div
+                                class="bar-chart__x-data class=bar-chart__x-data">Python
+                        </div></td>
+                        <td
+                                class="bar-chart__x-label"><div
+                                class="bar-chart__x-data class=bar-chart__x-data">Node
+                            .js</div></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                <table class="bar-chart--other-chart">
+                    <caption class="bar-chart__title--other" ><h3>Other
+                        Skills</h3></caption>
+                    <tbody>
+                    <tr>
+                        <td class="bar-chart__y-label">Expert</td>
+                        <td class="bar-chart__bar--other first-bar" rowspan="4"><div
+                                class="tooltip">Expert</div></td>
+                        <td class="bar-chart__bar--other second-bar" rowspan="4"><div
+                                class="tooltip">Expert</div></td>
+                    </tr>
+                    <tr>
+                        <td class="bar-chart__y-label">Proficient</td>
+                        <td class="bar-chart__bar--other third-bar" rowspan="3"><div
+                                class="tooltip">Proficient</div></td>
+                        <td class="bar-chart__bar--other--blank"></td>
+                        <td class="bar-chart__bar--other fifth-bar" rowspan="3"><div
+                                class="tooltip">Proficient</div></td>
+                    </tr>
+                    <tr>
+                        <td>Competent</td>
+                        <td class="bar-chart__bar--other fourth-bar" rowspan="2"><div
+                                class="tooltip">Competent</div></td>
+                        <td class="bar-chart__bar--other--blank"></td>
+                        <td class="bar-chart__bar--other--blank"></td>
+
+
+                    </tr>
+                    <tr>
+                        <td class="bar-chart__y-label">Learning</td>
+
+
+                    </tr>
+                    <tr>
+                        <td class="bar-chart__y-label"></td>
+                        <td class="bar-chart__x-label"><div class="bar-chart__x-data">Communication
+                        </div></td>
+                        <td class="bar-chart__x-label"><div class="bar-chart__x-data">Problem
+                            Solving</div></td>
+                        <td class="bar-chart__x-label"><div class="bar-chart__x-data">Business
+                            Writing</div></td>
+                        <td class="bar-chart__x-label"><div class="bar-chart__x-data">Public
+                            Speaking</div></td>
+                        <td
+                                class="bar-chart__x-label"><div class="bar-chart__x-data">Coaching
+                        </div></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+        </div>
+
+    </section>
+        <section id="contact-section" class="contact-section content__section"
+                 data-target="scroll">
+        <h1 class="contact-section__title">Contact</h1>
+            <div class="digital-card"> <!--Uses BEM naming convention -->
+                <label for="toggle">
+                    <input class="digital-card__toggle" type="checkbox"
+                           id="toggle"/>
+                    <div class="digital-card__card">
+                        <div class="digital-card__card--front">
+                            <div class="digital-card__bio-container">
+                                <h1 class="digital-card__header">
+                                    Stu Wood
+                                </h1>
+                                <h4 class="digital-card__sub-header">Student
+                                    at Modern Developer</h4>
+                                <p class="digital-card__bio">
+                                    Stu is an aspiring full stack JavaScript developer.
+                                </p>
+                                <p class="digital-card__contact-info">Stu.Wood02@gmail.com</p>
+                                <i class="fa fa-retweet fa-2x digital-card__fa-retweet"
+                                        aria-hidden="true"></i>
+                                <div class="digital-card__social-footer">
+                                    <img
+                                            class="digital-card__social-icons"
+                                            src="../images/twitter.png"/>
+                                    <img src="../images/github1.png"/>
+                                    <img src="../images/linkedin.png"/>
+
+                                </div>
+                                <div class="digital-card__encyclopedia">
+                                    <img class="digital-card__encyclopedia-icon"
+                                         src="../images/enc1.png">
+                                    <div class="digital-card__encyclopedia-text">
+                                        Stu Wood
+                                        <br>
+                                        on Encyclopedia.MD
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="digital-card__card--back">
+                            <!-- Back of card -->
+                        </div>
+                    </div>
+                </label>
+            </div>
+    </section>
+</body>
+<!-- build:js -->
+<script src="../scripts/scrollingSidebar.js"></script>
+<script src="../scripts/smoothScrolling.js"></script>
+<script src="../scripts/scrollSpy.js"></script>
+<!-- endbuild -->
+<!--TODO embed accordion, the calculator, and the image gallery -->
+<!-- fixme Style projects menu link -->
+<!-- TODO accordion should open and close to function like a real accordion -->
+<!-- TODO Make biz card fully responsive, including image resizing -->
+<!-- Todo add footer to site -->
+<!-- fixme darken yellow hover on tabs -->
+
+
+</html>
+

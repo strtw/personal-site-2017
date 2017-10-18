@@ -1,0 +1,103 @@
+//_modal_search.scss
+
+//TODO:nest elements in _modal_search.scss
+
+.modal-search{
+  position: relative;
+  margin-right:10px;
+}
+
+.modal-search__search-bar{
+  background-color: site-colors('primary');
+  border: none;
+  border-bottom: 1px solid;
+  color: site-colors('light-font');
+  margin-right: 5px;
+  outline: none;
+}
+
+.modal-search__close-btn::after{
+  content:"\f00d";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 4px;
+  top: 3px;
+}
+
+.modal-search__message{
+  display: block;
+  margin-bottom: 20px;
+  padding: 30px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.modal-search__display{
+  background-color:site-colors('primary');
+  border: 1px solid;
+  margin: 0 auto;
+  position: relative;
+  top: 30vh;
+  width: 50%;
+}
+
+.modal-search__background{
+  background-color:$backdrop-color-transparent;
+  height: 300vh;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: visible;
+  width: 100%;
+  z-index: 200;
+}
+
+
+.modal-search__open-control {
+  display:none;
+  &:checked ~ .modal-search__background {
+    visibility: visible;
+    @media screen and (min-width: 857px) {
+      & .modal-search__device-width--first {
+        @include modal-search__device-width;
+        visibility: visible;
+        &::after {
+          content: "Device with > 857px";
+        }
+      }
+    }
+    @media screen and (max-width: 857px) and (min-width: 771px) {
+      & .modal-search__device-width--second {
+        @include modal-search__device-width;
+        visibility: visible;
+        &::after {
+          content: "Device with < 857px";
+        }
+      }
+    }
+    @media screen and (max-width: 770px) {
+      & .modal-search__device-width--third {
+        @include modal-search__device-width;
+        visibility: visible;
+        &::after {
+          content: "Device with < 770px";
+        }
+      }
+    }
+  }
+}
+
+.modal-search__close-control{
+  display:none;
+  &:checked ~ .modal-search__background{
+    visibility:hidden;
+  }
+}
+
+
+
+
+
+

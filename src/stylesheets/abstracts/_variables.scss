@@ -1,0 +1,22 @@
+//_variables.scss
+
+$site-colors: (
+  "primary-font":#000000,
+  "light-font":#ffffff,
+  "background":#ffffff,
+  "background-dark":#FCFCFC,
+  "primary":#4484CE, //lightblue
+  "secondary":#F19F4D, //orange
+  "accent":#f9cf00,//yellow
+  "grayout":#E7E7E7
+);
+
+$border-light:#d9d9d9;
+$backdrop-color:#E7E7E7;
+$backdrop-color-transparent:rgba($backdrop-color,.8);
+
+$site-fonts: (
+  "primary":Raleway,
+  "secondary":'Open Sans',
+  "accent": 'Rock Salt'
+);

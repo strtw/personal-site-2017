@@ -1,0 +1,11 @@
+{
+    htmllintrc: ".htmllintrc",
+    useHtmllintrc: true,
+    rules: {},
+    plugins: [],
+    limitFiles: `Number.MAX_VALUE`,
+    limitIssuesPerFile: `Number.MAX_VALUE`,
+    limitIssues: `Number.MAX_VALUE`,
+    "line-end-style": "false",
+    "class-style": "false"
+}

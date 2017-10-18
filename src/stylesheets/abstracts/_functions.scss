@@ -1,0 +1,7 @@
+//_functions.scss
+
+@function site-colors($key: 'primary') {
+  @return map-get($site-colors, $key);
+}
+
+

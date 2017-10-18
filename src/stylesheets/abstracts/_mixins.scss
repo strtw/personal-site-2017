@@ -1,0 +1,40 @@
+@mixin lovehate($self: false) {
+  @if $self {
+    &{
+      text-decoration: none;
+    };
+    &,
+    &:visited,
+    &:hover,
+    &:active {
+      @content;
+    }
+  } @else {
+    &:visited,
+    &:hover,
+    &:active {
+      @content;
+    }
+  }
+}
+
+//usage @include lovehate{} OR @include lovehate{$self:true}
+
+
+@mixin modal-search__device-width(){ //this class is never displayed unmodified, used to remove extra html
+  visibility: hidden;
+  position: absolute;
+  margin-top: 5%;
+  bottom: 10%;
+  right: 20px;
+  color: lightblue
+}
+
+@mixin section-h1 {
+  margin: 50px auto 60px auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2em;
+  color: #4484C4;
+}

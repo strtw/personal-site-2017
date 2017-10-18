@@ -1,0 +1,77 @@
+//_homepage.scss;
+
+@import '../components/bar_chart';
+
+.section-content{
+  margin:20px auto 60px auto;
+  width:60%;
+  line-height: 2.3em;
+}
+
+.about__title,.projects__title,
+.skills__title,.contact-section__title{
+  @include section-h1;
+}
+
+.about__title{
+  margin-top:150px;
+}
+
+.projects,.about,.contact-section,.skills{
+  margin: 0 auto;
+  position: relative;
+  width: 90%;
+  @media screen and (max-width:770px){
+    width:100%;
+  }
+}
+
+.projects {
+  margin-bottom: 100px;
+  @media screen and (max-width:770px){
+    margin-bottom:0px;
+  }
+}
+
+.skills {
+  top:70px;
+  @media screen and (max-width: 857px) {
+
+  }
+  @media screen and (max-width: 635px) {
+  }
+  @media screen and (max-width: 358px) {
+
+    x-overflow:hidden;
+  }
+}
+
+.contact-section{
+  top:150px;
+}
+
+.skills-bar{
+  color:site-colors("light-font");
+  font-size:.8em;
+  margin:0 auto 40px auto;
+  width:85%;
+}
+
+.skills-bar__frontend{
+  background-color:site-colors("primary");
+  float:left;
+  height:30px;
+  line-height: 2.5em;
+  padding-left: 3px;
+  width:85%;
+}
+
+.skills-bar__backend{
+  background-color:site-colors("secondary");
+  float:right;
+  height:30px;
+  line-height: 2.5em;
+  padding-left: 3px;
+  padding-left: 3px;
+  width:15%;
+}

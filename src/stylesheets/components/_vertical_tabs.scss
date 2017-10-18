@@ -1,0 +1,68 @@
+//_vertical_tab
+
+.tab{
+  border-radius: 3px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  padding:0px;
+  width: 250px;
+  @media screen and (max-width:770px){
+    border-radius: 3px;
+    margin-bottom:0;
+    margin-left:auto;
+    margin-right:auto;
+    padding:0px;
+    position:relative;
+    width: 100%;
+    width:100%;
+  }
+}
+
+.tab__control{
+  display:none;
+  &:checked ~ .tab__label{
+    background-color: site-colors('background-light');
+    color: site-colors('primary');
+    font-weight: 600;
+    opacity: 1;
+  }
+  &:checked ~ .carousel { //todo break this out
+    z-index:1;
+  }
+  &:hover:checked + .tab__label {
+    color: site-colors('primary');
+  }
+  @media screen and (max-width:770px){
+    &:checked ~ .carousel {
+      display: block;
+      height: 400px;
+      width: 100%;
+    }
+  }
+}
+
+.tab__label{
+  border-bottom: 1px dotted $border-light;
+  cursor:pointer;
+  display: block;
+  left: 40%;
+  opacity:.5;
+  padding: 10px;
+  position: relative;
+  text-align: left;
+  transition:color .3s;
+  -webkit-transition:color .3s;
+  width: 200px;
+  @media screen and (max-width:1115px){
+    left:2%;
+  }
+  @media screen and (max-width:770px){
+    display:block;
+    left: 0;
+    text-align:center;
+    width:100%;
+  }
+  &:nth-child(2):hover{
+    color: site-colors('accent');
+  }
+}

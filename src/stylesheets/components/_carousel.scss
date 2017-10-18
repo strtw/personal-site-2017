@@ -1,0 +1,269 @@
+//_carousel.scss
+
+
+
+
+.carousel{
+  background-color: site-colors('background-dark');
+  border-radius: 3px;
+  border: 1px dotted $border-light;
+  height: 550px;
+  position: absolute;
+  right: 7%;
+  top: 103px;
+  width: 60%;
+  @media screen and (max-width:770px){
+    display:none;
+    height:auto;
+    left:0;
+    position:relative;
+    top:0px;
+  }
+}
+
+%carousel-arrows{
+  position:absolute;
+  top:50%;
+  display:none;
+}
+
+.carousel__previous-btn{
+  left:5%;
+  @extend %carousel-arrows;
+}
+
+
+.carousel__next-btn{
+  right:6%;
+  width: 20px;
+  @extend %carousel-arrows;
+}
+
+.carousel__slider-control{
+  display:none;
+  position:absolute;
+}
+
+.carousel__slider-paragraph{
+  line-height: 2em;
+  position: relative;
+  @media screen and (max-width:770px) {
+    font-size: 2vw;
+  }
+}
+
+%carousel__slider{
+  -webkit-transform: translateX(-50%);
+  border-radius:5px;
+  left: 50%;
+  opacity:0;
+  position: absolute;
+  top:50px;
+  transform: translateX(-50%);
+}
+
+.carousel__slider-content{
+  @extend %carousel__slider;
+}
+
+.carousel__slider-image{
+  @extend %carousel__slider;
+  height: auto;
+  max-width: 60%;
+  @media screen and (max-width: 770px){
+    max-height: 70%;
+    position: absolute;
+    top: 5%;
+    width: auto;
+  }
+}
+
+.carousel__container-caption{
+  bottom: 2%;
+  left: 37%;
+  position: absolute;
+  transform: translateX(-50%);
+  webkit-transform: translateX(-50%);
+  width: 70%;
+  p{
+    margin:0;
+  }
+  a{
+    @include lovehate($self: true);
+    color:#4484C4;
+    text-decoration: none;
+  }
+}
+
+.carousel__caption-heading{
+  color:site-colors('secondary');
+}
+.carousel__github-source{
+  opacity:.2;
+}
+
+.carousel__bullet-container{
+  -webkit-transform: translateX(-50%);
+  bottom:18%;
+  display: inline-block;
+  font-size: 35px;
+  left: 50%;
+  position:absolute;
+  transform: translateX(-50%);
+}
+
+.carousel__control-1,
+.carousel__control-2,
+.carousel__control-3,.carousel__bullet {
+  cursor:pointer;
+}
+
+
+//todo improve this section with scss
+
+#button1:checked ~ .carousel__control-1,
+#button2:checked ~ .carousel__control-2,
+#button3:checked ~ .carousel__control-3{
+  display:block;
+}
+
+input[id*="button1"]:checked ~ .carousel__bullet-container .carousel__bullet:first-child,
+input[id*="button2"]:checked ~ .carousel__bullet-container .carousel__bullet:nth-child(2),
+input[id*="button3"]:checked ~ .carousel__bullet-container .carousel__bullet:nth-child(3),
+input[id*="button4"]:checked ~ .carousel__bullet-container .carousel__bullet:nth-child(4),
+input[id*="button5"]:checked ~ .carousel__bullet-container .carousel__bullet:nth-child(5),
+input[id*="button6"]:checked ~ .carousel__bullet-container .carousel__bullet:nth-child(6),
+input[id*="button7"]:checked ~ .carousel__bullet-container .carousel__bullet:nth-child(7)
+{
+  color:site-colors('secondary');
+}
+
+#profiles-button1:checked ~ .control-1-profiles,
+#profiles-button2:checked ~ .control-2-profiles,
+#profiles-button3:checked ~ .control-3-profiles{
+  display:block;
+}
+
+#forms-button1:checked ~ .control-1-forms,
+#forms-button2:checked ~ .control-2-forms,
+#forms-button3:checked ~ .control-3-forms,
+#forms-button4:checked ~ .control-4-forms,
+#forms-button5:checked ~ .control-5-forms,
+#forms-button6:checked ~ .control-6-forms,
+#forms-button7:checked ~ .control-7-forms{
+  display:block;
+}
+
+#calc-button1:checked ~ .control-1-calc,
+#calc-button2:checked ~ .control-2-calc,
+#calc-button3:checked ~ .control-3-calc{
+  display:block;
+}
+
+#ui-button1:checked ~ .control-1-ui,
+#ui-button2:checked ~ .control-2-ui,
+#ui-button3:checked ~ .control-3-ui{
+  display:block;
+}
+
+#product-button1:checked ~ .control-1-product,
+#product-button2:checked ~ .control-2-product,
+#product-button3:checked ~ .control-3-product{
+  display:block;
+}
+
+#accordion-button1:checked ~ .control-1-accordion,
+#accordion-button2:checked ~ .control-2-accordion,
+#accordion-button3:checked ~ .control-3-accordion{
+  display:block;
+}
+
+#tab-button1:checked ~ .control-1-tab,
+#tab-button2:checked ~ .control-2-tab,
+#tab-button3:checked ~ .control-3-tab{
+  display:block;
+}
+
+#gallery-button1:checked ~ .control-1-gallery,
+#gallery-button2:checked ~ .control-2-gallery,
+#gallery-button3:checked ~ .control-3-gallery{
+  display:block;
+}
+
+
+#bizcard-button1:checked ~ .control-1-bizcard,
+#bizcard-button2:checked ~ .control-2-bizcard,
+#bizcard-button3:checked ~ .control-3-bizcard{
+  display:block;
+}
+
+
+
+
+#button1:checked + div,
+#button2:checked + img,
+#button3:checked + img{
+  opacity:100;
+}
+
+
+#profiles-button1:checked + div,
+#profiles-button2:checked + img,
+#profiles-button3:checked + img{
+  opacity:100;
+}
+
+
+#forms-button1:checked + div,
+#forms-button2:checked + img,
+#forms-button3:checked + img,
+#forms-button4:checked + img,
+#forms-button5:checked + img,
+#forms-button6:checked + img,
+#forms-button7:checked + img{
+  opacity:100;
+}
+
+
+#calc-button1:checked + div,
+#calc-button2:checked + img,
+#calc-button3:checked + img{
+  opacity:100;
+}
+
+#ui-button1:checked + div,
+#ui-button2:checked + img,
+#ui-button3:checked + img{
+  opacity:100;
+}
+
+#product-button1:checked + div,
+#product-button2:checked + img,
+#product-button3:checked + img{
+  opacity:100;
+}
+
+#accordion-button1:checked + div,
+#accordion-button2:checked + img,
+#accordion-button3:checked + img{
+  opacity:100;
+}
+
+#tab-button1:checked + div,
+#tab-button2:checked + img,
+#tab-button3:checked + img{
+  opacity:100;
+}
+
+#gallery-button1:checked + div,
+#gallery-button2:checked + img,
+#gallery-button3:checked + img{
+  opacity:100;
+}
+
+#bizcard-button1:checked + div,
+#bizcard-button2:checked + img,
+#bizcard-button3:checked + img{
+  opacity:100;
+}
+

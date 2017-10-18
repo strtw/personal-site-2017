@@ -1,0 +1,205 @@
+//_navigation.scss
+
+
+.menu__hamburger{ //responsive
+  display:none;
+  left: 30px;
+  position: relative;
+  top: 25px;
+  z-index:3;
+  @media screen and (max-width:770px) {
+    display:inline-block;
+    z-index: 199;
+  }
+}
+
+.nav{
+  width: 90%;
+  a{
+    @include lovehate($self:true){
+      border-bottom: 1px dotted white;
+      color:site-colors('light-font');
+    }
+    -webkit-transition:all .3s ease;
+    transition: all .3s ease;
+  }
+  a:hover{
+    text-shadow: 3px 2px 8px rgba(135, 213, 249,.95);
+  }
+
+}
+
+%desktop-menu{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:horizontal;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:row;
+  flex-direction:row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.menu__container{
+  @extend %desktop-menu;
+  @media screen and (max-width:770px) {
+    align-items: flex-start;
+    -ms-flex-align: start;
+    -webkit-box-align: start;
+    background-color: #4484CE;
+    border-right: 1px solid;
+    bottom: 0px;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    left: -430px;
+    max-width: 33%;
+    padding-bottom: 30px;
+    padding-top: 3px;
+    position: fixed;
+    margin: 0px;
+    transition: transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+    -webkit-transition: -webkit-transform .5s;
+    top: 0px;
+    z-index: 4;
+  }
+  @media screen and (max-width:635px) {
+    max-width: 50%;
+  }
+  @media screen and (max-width:534px) {
+    max-width: 50%;
+    min-width:50%;
+  }
+  @media screen and (max-width:462px) {
+    max-width: 60%;
+    min-width:50%;
+  }
+  @media screen and (max-width:358px) {
+    max-width: 80%;
+    min-width:70%;
+  }
+}
+
+
+.menu__submenu{
+  @extend %desktop-menu;
+}
+
+.menu__item,.menu__submenu-item{
+  list-style-type: none;
+ // margin-right:20px;
+  //margin-top:15px;
+  transition: all .5s ease;
+  -webkit-transition:all .5s ease;
+}
+
+.menu__footer {
+  display: none;
+  @media screen and (max-width:770px) {
+    border-top: 1px solid;
+    bottom: 0px;
+    display: block;
+    font-size: .5em;
+    margin-left: px;
+    opacity: .3;
+    padding: 5px 0;
+    position: absolute;
+    width: 82%;
+  }
+}
+
+.menu__hamburger-control {
+  display: none; /*makes sure the browser doesn't try to focus on checked*/
+  @media screen and (max-width: 770px) {
+    &:checked ~ li .menu__hamburger-icon {
+      transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+      transform-origin: 25% 50%;
+    }
+    &:checked ~ .menu__container {
+      background-color: site-colors('primary');
+      transform: translate(400px, 0);
+      -webkit-transform: translate(400px, 0);
+      z-index: 100;
+    }
+    &:checked ~ .menu__backdrop-right {
+      visibility: visible;
+    }
+  }
+}
+
+.menu__hamburger-icon { // font-awesome hamburger icon
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.menu__backdrop-right{
+  @media screen and (max-width:770px) {
+    background-color:$backdrop-color-transparent;
+    bottom:0;
+    left:0;
+    position:fixed;
+    right:0;
+    top:0;
+    -webkit-transition:all .2s ease;
+    transition: all .2s ease;
+    visibility:hidden;
+    z-index:1;
+  }
+}
+
+.menu__submenu {
+  border: none;
+  display:none;
+  height: 20%;
+  max-width: 100%;
+  padding-top: 0;
+  position: relative;
+  top: 0;
+  .menu__submenu-item {
+    margin-right: 0px;
+  }
+  @media screen and (max-width: 770px) {
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, .5);
+      border-radius: 8px;
+      height: 30px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: lightgray;
+      border-radius: 1px;
+    }
+  }
+}
+
+.menu__submenu-control{
+  display:none;
+  visibility:hidden;
+  @media screen and (max-width:770px) {
+    &:checked + .menu__submenu{
+      border:1px dotted;
+      display:block;
+      left:-29px;
+      margin-left: 27px;
+      overflow: auto;
+      padding-left: 5px;
+      position: relative;
+      top: 1%;
+      width: 100%;
+    }
+  }
+}

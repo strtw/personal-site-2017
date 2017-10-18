@@ -1,0 +1,26 @@
+//_tooltip.scss
+
+.tooltip{
+  border:1px solid;
+  height:50px;
+  padding:5px;
+  position:absolute;
+  visibility:hidden;
+  top:-65px;
+  left:-100%;
+  text-align:center;
+  line-height: 2.8em;
+  background-color:lightgray;
+  color:white;
+}
+
+.tooltip::after {
+  position: absolute;
+  top: 62%;
+  left: 40%;
+  content: "\f0d7";
+  font-family: FontAwesome;
+  white-space: pre;
+  color: lightgray;
+  font-size: 2em;
+}

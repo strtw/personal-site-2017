@@ -1,0 +1,6 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+.idea/workspace.xml
+src/stylesheets/themes/
+src/stylesheets/vendor/
+node_modules
