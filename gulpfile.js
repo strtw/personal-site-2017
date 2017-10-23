@@ -34,18 +34,18 @@ var exitOnJshintError = map(function (file, cb) { // http://stackoverflow.com/qu
 ///HTML///
 
 gulp.task('htmlLinter', function() {
-    return gulp.src('./src/html/*.html')
+    return gulp.src('./src/*.html')
         .pipe(htmlLint.format())
         .pipe(htmlLint.failOnError());
 });
 
 gulp.task('replaceFileRefs',['htmlLinter'], function() {
-    gulp.src('./src/html/index.html')
+    gulp.src('./src/index.html')
         .pipe(htmlreplace({
-            'css': '../styles/bundle.min.css',
-            'js': '../scripts/all.js'
+            'css': 'styles/bundle.min.css',
+            'js': 'scripts/all.js'
         }))
-        .pipe(gulp.dest('./dest/html/'));
+        .pipe(gulp.dest('./dest/'));
 });
 
 

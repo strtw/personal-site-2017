@@ -12,7 +12,9 @@
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Rock+Salt" rel="stylesheet">
     <link href="https://necolas.github.io/normalize.css/5.0.0/normalize.css" rel="stylesheet">
     <!--Gulp plugin gulp-html-replace used below-->
-    <link rel="stylesheet" href="../styles/bundle.min.css">
+    <!-- build:css -->
+    <link href="stylesheets/main.css" rel="stylesheet">
+    <!-- endbuild -->
     <title>Title</title>
 </head>
 <body>
@@ -37,13 +39,12 @@
                     <li class="menu__item">
                         <!--<label for="sub">--><a href="#projects">Projects
                             </a><!--</label>--> <!--
-                                 TODO add s
-                        conditional class when menu is in fly-out mode <a href="#projects">-->
+                                 TODO add conditional class when menu is in fly-out mode <a href="#projects">-->
                     </li>
                     <input type="checkbox" id="sub"
                            class="menu__submenu-control"/>
                     <ul class="menu__submenu">
-                        <li class="menu__submenu-item>Button Web Component</li>
+                        <li class="menu__submenu-item>Elle UI Framework</li>
                         <li class="menu__submenu-item>Profiles Sidebar</li>
                         <li class="menu__submenu-item>Forms & Inputs</li>
                         <li class="menu__submenu-item>Calculator</li>
@@ -129,30 +130,26 @@
             <!--Tab Area -->
                 <div class="tab">
                     <input class="tab__control" type="radio" name="tabs"
-                            id="button-web-component" checked/>
-                    <label class="tab__label" for="button-web-component">Button
-                    Web
-                        Component</label>
+                            id="elle-ui-framework" checked/>
+                    <label class="tab__label" for="elle-ui-framework">Elle UI Framework</label>
                     <div class="carousel">
                         <div class="carousel__container">
                             <input class="carousel__slider-control" type="radio"
-                                   name="button-web-component" id="button1" checked/>
+                                   name="elle-ui-framework" id="button1" checked/>
                                 <div class="carousel__slider-content">
-                                        <p class="carousel__slider-paragraph">In this project I wrote the
-                                            ruleset(s) that would style all elements with the button class
-                                            to be visually and functionally identical. I enjoyed learning about how sub-classes could modify style applied with parent classes, and the basics of pseudo-selectors.
+                                        <p class="carousel__slider-paragraph">I developed the Elle UI Framework as a proof of concept project with three other developers during a hackathon. My components included, scrollspy side navigation, tabs, cards, modal, buttons and long search editor.
                                         </p>
                                 </div>
 
-                            <input class="carousel__slider-control" type="radio" name="button-web-component"
+                            <input class="carousel__slider-control" type="radio" name="elle-ui-framework"
                                     id="button2"/>
                             <img class="carousel__slider-image"
-                                 src="../images/web-component-buttons.gif">
+                                 src="images/Elle_UI.gif">
                             <input class="carousel__slider-control"
                                          type="radio"
-                                        name="button-web-component" id="button3"/>
+                                        name="elle-ui-framework" id="button3"/>
                             <img class="carousel__slider-image"
-                                 src="../images/buttons.png">
+                                 src="images/Elle_UI_long_search.gif">
 
                             <label for="button3"
                                    class="carousel__control-1 carousel__previous-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i></label>
@@ -172,10 +169,10 @@
                             <div class="carousel__container-caption">
                                 <p><span class="carousel__caption-heading">
                                     Technologies:</span>
-                                    HTML5, CSS3.</p>
-                                <p> <span class="carousel__github-source"><i class="fa fa-github fa-2" aria-hidden="true"></i>
-                                    Source</span> |
-                                    <a href="http://strtw.github.io/learning-web-components/components/buttons/">Demo</a></p>
+                                    HTML5, CSS3, JavaScript, SASS.</p>
+                                <p><i class="fa fa-github fa-2" aria-hidden="true"></i>
+                                    <a href="https://github.com/strtw/md-hackathon-team-1">Source</a> |
+                                    <a href="https://strtw.github.io/md-hackathon-team-1/">Demo</a></p>
                             </div>
                             <div class="carousel__bullet-container">
                                 <label for="button1" class="carousel__bullet"><i class="fa fa-circle fa-1" aria-hidden="true"></i></label>
@@ -187,31 +184,29 @@
                 </div>
                 <div class="tab">
                     <input class="tab__control"  type="radio" name="tabs"
-                           id="profiles-sidebar"/>
-                    <label class="tab__label" for="profiles-sidebar">Profiles
-                        Sidebar</label>
+                           id="html5-puzzle"/>
+                    <label class="tab__label" for="html5-puzzle">HTML5 Puzzle</label>
                     <div class="carousel">
                         <div class="carousel__container">
                             <input class="carousel__slider-control"
-                                    type="radio" name="profiles-sidebar"
+                                    type="radio" name="html5-puzzle"
                                    id="profiles-button1" checked/>
                             <div class="carousel__slider-content">
-                                    <p class="carousel__slider-paragraph">This was one of the first projects
-                                        that familiarized us with how to design and implement layouts.  Our instructions were to use HTML and CSS to
-                                        customize an informative profile card to be used on a Modern Developer website. In this project I took the opportunity to implement the layout with floats.
+                                    <p class="carousel__slider-paragraph">
+                                        HTML5 jigsaw puzzle that utilizes the HTML Drag and Drop API. Puzzle includes timer, multiple difficulty levels, and completion animation
                                     </p>
                             </div>
 
-                            <input class="carousel__slider-control" type="radio" name="profiles-sidebar"
+                            <input class="carousel__slider-control" type="radio" name="html5-puzzle"
                                     id="profiles-button2"/>
 
                             <img class="carousel__slider-image"
-                                 src="../images/profiles-full.png">
+                                 src="images/HTML5_puzzle.gif">
                             <input class="carousel__slider-control"
-                                   type="radio" name="profiles-sidebar"
+                                   type="radio" name="html5-puzzle"
                                    id="profiles-button3"/>
                             <img class="carousel__slider-image"
-                                 src="../images/profiles-top.png">
+                                 src="images/puzzle_scrambled.png">
 
                             <label for="profiles-button3"
                                    class="control-1-profiles carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
@@ -227,10 +222,10 @@
                                    class="control-3-profiles carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
                             <div class="carousel__container-caption">
                                 <p><span class="carousel__caption-heading">Technologies:</span>
-                                    HTML5, CSS3.</p>
-                                <p> <span class="carousel__github-source"><i class="fa fa-github fa-2" aria-hidden="true"></i>
-                                    Source</span> |
-                                    <a href="http://moderndeveloper-students.github.io/coursework-strtw/introduction-to-javascript-and-modern-web-development/introduction-to-css/project-3-profiles-sidebar/index.html">Demo</a></p>
+                                    HTML5, CSS3, Drag and Drop API, JavaScript</p>
+                                <p> <i class="fa fa-github fa-2" aria-hidden="true"></i>
+                                    <a href="https://github.com/strtw/puzzle">Source</a> |
+                                    <a href="http://stuwoodpuzzle.surge.sh/">Demo</a></p>
                             </div>
                             <div class="carousel__bullet-container">
                                 <label for="profiles-button1"
@@ -262,39 +257,39 @@
                                    type="radio" name="forms"
                                    id="forms-button2"/>
                             <img class="carousel__slider-image"
-                                 src="../images/color-builder.gif">
+                                 src="images/color-builder.gif">
 
                             <input class="carousel__slider-control"
                                    type="radio" name="forms"
                                    id="forms-button3"/>
                             <img class="carousel__slider-image"
-                                 src="../images/login-form.gif">
+                                 src="images/login-form.gif">
 
                             <input class="carousel__slider-control"
                                    type="radio" name="forms"
                                    id="forms-button4"/>
                             <img class="carousel__slider-image"
-                                 src="../images/signup.gif" height="350"
+                                 src="images/signup.gif" height="350"
                                  width="266">
 
                             <input class="carousel__slider-control"
                                    type="radio" name="forms"
                                    id="forms-button5"/>
                             <img class="carousel__slider-image"
-                                 src="../images/credit-debit.gif">
+                                 src="images/credit-debit.gif">
 
                             <input class="carousel__slider-control"
                                    type="radio" name="forms"
                                    id="forms-button6"/>
                             <img class="carousel__slider-image"
-                                  src="../images/shipping-billing.gif"
+                                  src="images/shipping-billing.gif"
                                   height="350" width="241">
 
                             <input class="carousel__slider-control"
                                    type="radio" name="forms"
                                    id="forms-button7"/>
                             <img class="carousel__slider-image"
-                                 src="../images/survey.png" height="350" width="241">
+                                 src="images/survey.png" height="350" width="241">
 
                             <label for="forms-button7"
                                    class="control-1-forms carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
@@ -366,7 +361,7 @@
                             <input class="carousel__slider-control" type="radio" name="calc" id="calc-button2"/>
 
                             <img class="carousel__slider-image"
-                                 src="../images/calculator.gif" width="254" height="350">
+                                 src="images/calculator.gif" width="254" height="350">
                             <input class="carousel__slider-control" type="radio" name="calc" id="calc-button3"/>
                             <img class="carousel__slider-image"
                                   src="http://placehold.it/150x300">
@@ -408,10 +403,10 @@
                             <input class="carousel__slider-control" type="radio" name="ui-clone" id="ui-button2"/>
 
                             <img class="carousel__slider-image"
-                                    src="../images/encyclopedia-profiles.png"/>
+                                    src="images/encyclopedia-profiles.png"/>
                             <input class="carousel__slider-control" type="radio" name="ui-clone" id="ui-button3"/>
                             <img class="carousel__slider-image"
-                                 src="../images/encyclopedia-profiles.gif"/>
+                                 src="images/encyclopedia-profiles.gif"/>
 
                             <label for="ui-button3" class="control-1-ui carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
                             <label for="ui-button2" class="control-1-ui carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
@@ -450,10 +445,10 @@
                             <input class="carousel__slider-control" type="radio" name="product-listing" id="product-button2"/>
 
                             <img class="carousel__slider-image"
-                                 src="../images/cart-item.png">
+                                 src="images/cart-item.png">
                             <input class="carousel__slider-control" type="radio" name="product-listing" id="product-button3"/>
                             <img class="carousel__slider-image"
-                                 src="../images/shopping-cart.gif"/>
+                                 src="images/shopping-cart.gif"/>
 
                             <label for="product-button3" class="control-1-product carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
                             <label for="product-button2" class="control-1-product carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
@@ -491,10 +486,10 @@
                             <input class="carousel__slider-control" type="radio" name="accordion" id="accordion-button2"/>
 
                             <img class="carousel__slider-image"
-                                 src="../images/accordion.png">
+                                 src="images/accordion.png">
                             <input class="carousel__slider-control" type="radio" name="accordion" id="accordion-button3"/>
                             <img class="carousel__slider-image"
-                                 src="../images/accordion.gif" height="350" width="223">
+                                 src="images/accordion.gif" height="350" width="223">
 
                             <label for="accordion-button3" class="control-1-accordion carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
                             <label for="accordion-button2" class="control-1-accordion carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
@@ -535,9 +530,9 @@
 
                             <input class="carousel__slider-control" type="radio" name="tab-component" id="tab-button2"/>
 
-                            <img class="carousel__slider-image" src="../images/tabs.png">
+                            <img class="carousel__slider-image" src="images/tabs.png">
                             <input class="carousel__slider-control" type="radio" name="tab-component" id="tab-button3"/>
-                            <img class="carousel__slider-image" src="../images/tabs.gif">
+                            <img class="carousel__slider-image" src="images/tabs.gif">
 
                             <label for="tab-button3" class="control-1-tab carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
                             <label for="tab-button2" class="control-1-tab carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
@@ -575,10 +570,10 @@
                             <input class="carousel__slider-control" type="radio" name="image-gallery" id="gallery-button2"/>
 
                             <img class="carousel__slider-image"
-                                 src="../images/image-gallery.png">
+                                 src="images/image-gallery.png">
                             <input class="carousel__slider-control" type="radio" name="image-gallery" id="gallery-button3"/>
                             <img class="carousel__slider-image"
-                                 src="../images/image-gallery.gif" width="437" height="350">
+                                 src="images/image-gallery.gif" width="437" height="350">
 
                             <label for="gallery-button3" class="control-1-gallery carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
                             <label for="gallery-button2" class="control-1-gallery carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
@@ -618,10 +613,10 @@
 
                             <input class="carousel__slider-control" type="radio" name="biz-card" id="bizcard-button2"/>
 
-                            <img class="carousel__slider-image" src="../images/business-card.png">
+                            <img class="carousel__slider-image" src="images/business-card.png">
                             <input class="carousel__slider-control" type="radio" name="biz-card" id="bizcard-button3"/>
                             <img class="carousel__slider-image"
-                                 src="../images/business-card.gif">
+                                 src="images/business-card.gif">
 
                             <label for="bizcard-button3" class="control-1-bizcard carousel__previous-btn"><i class="fa fa-chevron-left carousel__chevron" aria-hidden="true"></i></label>
                             <label for="bizcard-button2" class="control-1-bizcard carousel__next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></label>
@@ -833,14 +828,14 @@
                                 <div class="digital-card__social-footer">
                                     <img
                                             class="digital-card__social-icons"
-                                            src="../images/twitter.png"/>
-                                    <img src="../images/github1.png"/>
-                                    <img src="../images/linkedin.png"/>
+                                            src="images/twitter.png"/>
+                                    <img src="images/github1.png"/>
+                                    <img src="images/linkedin.png"/>
 
                                 </div>
                                 <div class="digital-card__encyclopedia">
                                     <img class="digital-card__encyclopedia-icon"
-                                         src="../images/enc1.png">
+                                         src="images/enc1.png">
                                     <div class="digital-card__encyclopedia-text">
                                         Stu Wood
                                         <br>
@@ -858,7 +853,11 @@
             </div>
     </section>
 </body>
-<script src="../scripts/all.js"></script>
+<!-- build:js -->
+<script src="scripts/scrollingSidebar.js"></script>
+<script src="scripts/smoothScrolling.js"></script>
+<script src="scripts/scrollSpy.js"></script>
+<!-- endbuild -->
 <!--TODO embed accordion, the calculator, and the image gallery -->
 <!-- fixme Style projects menu link -->
 <!-- TODO accordion should open and close to function like a real accordion -->
