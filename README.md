@@ -3,7 +3,7 @@
 This website showcases select frontend projects that I have undertaken and 
 also is a project in itself. 
 
-##Technologies Utilized
+## Technologies Utilized
 
 - Vanilla JavaScript
 - HTML5
@@ -11,7 +11,7 @@ also is a project in itself.
 - SASS / SCSS
 - Gulp.js
 
-##Methodologies
+## Methodologies
 
 - BEM naming convention
 - Semantic HTML
