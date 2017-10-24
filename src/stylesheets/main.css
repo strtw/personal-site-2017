@@ -703,7 +703,8 @@ input[id*="button7"]:checked ~ .carousel__bullet-container .carousel__bullet:nth
   -webkit-perspective: 1000px;
   perspective: 1000px;
   -webkit-perspective-origin: 50%;
-  perspective-origin: 50%; }
+  perspective-origin: 50%;
+  margin-top: -80px; }
 
 .digital-card__card {
   margin: 50px;
@@ -724,6 +725,10 @@ input[id*="button7"]:checked ~ .carousel__bullet-container .carousel__bullet:nth
   transition: transform 2s, -webkit-transform 2s;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
+
+.digital-card__footerContainer {
+  display: flex;
+  flex-wrap: wrap; }
 
 .digital-card__card--back, .digital-card__card--front {
   -webkit-backface-visibility: hidden;
@@ -777,19 +782,12 @@ input[id*="button7"]:checked ~ .carousel__bullet-container .carousel__bullet:nth
   visibility: hidden; }
 
 .digital-card__social-footer {
-  position: absolute;
-  top: 270px;
-  right: 0px;
-  display: inline-block;
   width: 200px; }
 
 .digital-card__social-icons {
   margin-left: 18px; }
 
 .digital-card__encyclopedia {
-  position: absolute;
-  top: 270px;
-  left: 28px;
   width: 200px; }
 
 .digital-card__encyclopedia-icon {
@@ -808,7 +806,7 @@ input[id*="button7"]:checked ~ .carousel__bullet-container .carousel__bullet:nth
 
 .digital-card__bio-container {
   margin-left: 32px;
-  margin-top: 41px; }
+  margin-top: 21px; }
 
 .digital-card__header {
   font-weight: 300;
