@@ -535,6 +535,9 @@ Custom .bar-chart defaults located at _bar_chart.scss
   left: 50%;
   position: absolute;
   transform: translateX(-50%); }
+  @media screen and (max-width: 500px) {
+    .carousel__bullet-container {
+      bottom: 130px; } }
 
 .carousel__control-1,
 .carousel__control-2,
