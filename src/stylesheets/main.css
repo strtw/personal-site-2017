@@ -740,12 +740,22 @@ input[id*="button7"]:checked ~ .carousel__bullet-container .carousel__bullet:nth
   border-radius: 2px; }
 
 .digital-card__card--back {
-  background: url("../images/siena.jpg");
+  background-color: #4484CE;
   background-repeat: no-repeat;
+  display: flex;
+  align-content: center;
+  justify-content: center;
   background-size: cover;
   -webkit-transform: rotateX(180deg);
   transform: rotateX(180deg);
+  position: relative;
   border-radius: 2px; }
+
+.digital-card__card--backImage {
+  width: auto;
+  height: 90%;
+  margin-top: 3%;
+  overflow: hidden; }
 
 .digital-card__toggle:checked + .digital-card__card {
   -webkit-transform: rotateX(179.9deg);
@@ -944,3 +954,5 @@ Custom .bar-chart defaults located at _bar_chart.scss
   padding-left: 3px;
   padding-left: 3px;
   width: 15%; }
+
+/*# sourceMappingURL=main.css.map */

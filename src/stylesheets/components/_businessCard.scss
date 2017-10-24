@@ -47,12 +47,24 @@
 }
 
 .digital-card__card--back{
-  background:url("../images/siena.jpg");
+  //background:url("../images/siena.jpg");
+  background-color:site-colors('primary');
   background-repeat: no-repeat;
+  display:flex;
+  align-content: center;
+  justify-content: center;
   background-size:cover;
   -webkit-transform: rotateX(180deg);
   transform: rotateX(180deg);
+  position:relative;
   border-radius:2px;
+}
+
+.digital-card__card--backImage{
+  width:auto;
+  height:90%;
+  margin-top:3%;
+  overflow: hidden;
 }
 
 .digital-card__toggle:checked + .digital-card__card
