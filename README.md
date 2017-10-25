@@ -1,10 +1,14 @@
 # My Personal Website / Portfolio
 
+*[View Website](http://stuwood.surge.sh/dest/html/index.html)*
+
 This website showcases select frontend projects that I have undertaken and 
 also is a project in itself. The site does not rely heavily on JavaScript
 for interactivity in order to demonstrate that I can achieve these effects 
 using only HTML and CSS. Heavier use of JavaScript can be found in the site's
 project section. 
+
+
 
 ## Technologies Utilized
 
