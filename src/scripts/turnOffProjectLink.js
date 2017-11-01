@@ -6,7 +6,7 @@
 // specified. So that the responsive menu will show a dropdown not a link
 (function(){
     window.onload = function(){
-        var mql = window.matchMedia("(max-width: 770px)");
+        var mql = window.matchMedia("(max-width: 770px)");//
 
         var projectLink = document.getElementById("project-link");
 
@@ -21,7 +21,7 @@
             }
         };
 
-        mql.addListener(handleMediaChange);
+        mql.addListener(handleMediaChange); // listens to browser resizes.
 
         handleMediaChange(mql);
 

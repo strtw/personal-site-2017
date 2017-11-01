@@ -2,6 +2,7 @@
  * Created by stu on 5/5/17.
  */
 (function(){
+    'use strict';
     var body = document.getElementsByTagName("BODY")[0];
     var sideBar = document.getElementsByClassName("sidebar")[0];
     var timeoutID;

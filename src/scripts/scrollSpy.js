@@ -3,6 +3,7 @@
  */
 
 (function(){
+    'use strict';
     var desktopScroll = window.matchMedia( "(min-width: 800px)" );
 
     function scrollSpy(){
