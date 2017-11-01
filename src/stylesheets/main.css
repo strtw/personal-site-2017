@@ -498,6 +498,7 @@ Custom .bar-chart defaults located at _bar_chart.scss
 
 .carousel__slider-image {
   max-height: 60%;
+  max-width: 60%;
   object-fit: contain; }
   @media screen and (max-width: 770px) {
     .carousel__slider-image {
