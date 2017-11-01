@@ -68,8 +68,8 @@
 
 .carousel__slider-image{
   @extend %carousel__slider;
-  height: auto;
-  max-width: 60%;
+  max-height: 60%;
+  object-fit: contain;
   @media screen and (max-width: 770px){
     max-height: 70%;
     position: absolute;
@@ -157,9 +157,9 @@ input[id*="button7"]:checked ~ .carousel__bullet-container .carousel__bullet:nth
   display:block;
 }
 
-#calc-button1:checked ~ .control-1-calc,
-#calc-button2:checked ~ .control-2-calc,
-#calc-button3:checked ~ .control-3-calc{
+#catalog-button1:checked ~ .control-1-catalog,
+#catalog-button2:checked ~ .control-2-catalog,
+#catalog-button3:checked ~ .control-3-catalog{
   display:block;
 }
 
@@ -228,9 +228,9 @@ input[id*="button7"]:checked ~ .carousel__bullet-container .carousel__bullet:nth
 }
 
 
-#calc-button1:checked + div,
-#calc-button2:checked + img,
-#calc-button3:checked + img{
+#catalog-button1:checked + div,
+#catalog-button2:checked + img,
+#catalog-button3:checked + img{
   opacity:100;
 }
 

@@ -497,8 +497,8 @@ Custom .bar-chart defaults located at _bar_chart.scss
   transform: translateX(-50%); }
 
 .carousel__slider-image {
-  height: auto;
-  max-width: 60%; }
+  max-height: 60%;
+  object-fit: contain; }
   @media screen and (max-width: 770px) {
     .carousel__slider-image {
       max-height: 70%;
@@ -572,9 +572,9 @@ input[id*="button7"]:checked ~ .carousel__bullet-container .carousel__bullet:nth
 #forms-button7:checked ~ .control-7-forms {
   display: block; }
 
-#calc-button1:checked ~ .control-1-calc,
-#calc-button2:checked ~ .control-2-calc,
-#calc-button3:checked ~ .control-3-calc {
+#catalog-button1:checked ~ .control-1-catalog,
+#catalog-button2:checked ~ .control-2-catalog,
+#catalog-button3:checked ~ .control-3-catalog {
   display: block; }
 
 #ui-button1:checked ~ .control-1-ui,
@@ -626,9 +626,9 @@ input[id*="button7"]:checked ~ .carousel__bullet-container .carousel__bullet:nth
 #forms-button7:checked + img {
   opacity: 100; }
 
-#calc-button1:checked + div,
-#calc-button2:checked + img,
-#calc-button3:checked + img {
+#catalog-button1:checked + div,
+#catalog-button2:checked + img,
+#catalog-button3:checked + img {
   opacity: 100; }
 
 #ui-button1:checked + div,
