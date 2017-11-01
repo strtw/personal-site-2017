@@ -8,7 +8,7 @@
     window.addEventListener("scroll", scrollDelay);
 
     function scrollTop(){
-        var yOffset = body.scrollTop;
+        var yOffset = document.documentElement.scrollTop || document.body.scrollTop;
         if(yOffset >= 60){
             sideBar.style.position = "fixed";
             sideBar.style.top = 130 + "px";
