@@ -19,7 +19,7 @@ var htmlLint = require('gulp-html-lint');
 const imagemin = require('gulp-imagemin');
 var htmlreplace = require('gulp-html-replace');
 var ghPages = require('gulp-gh-pages');
-
+var babel = require("gulp-babel");
 
 
 ///HELPERS///
@@ -102,7 +102,14 @@ gulp.task('scripts',['lint'], function() { //concatenate
 });
 
 
-gulp.task('compress',['scripts'], function (cb) { //uglify
+gulp.task('babel',['scripts'], function () {
+    return gulp.src("dest/scripts/*.js")
+        .pipe(babel())
+        .pipe(gulp.dest("dest/scripts/"));
+});
+
+
+gulp.task('compress',['babel'], function (cb) { //uglify
     pump([
             gulp.src('./dest/scripts/*.js'),
             uglify(),
@@ -112,7 +119,8 @@ gulp.task('compress',['scripts'], function (cb) { //uglify
     );
 });
 
-gulp.task('js',['lint','scripts','compress']);
+
+gulp.task('js',['lint','scripts','compress','babel']);
 
 
 ///TESTING///

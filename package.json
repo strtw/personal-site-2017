@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.0.22",
+  "version": "1.0.30",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,10 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
     "gulp-bump": "^2.7.0",
     "gulp-clean-css": "^3.0.4",
     "gulp-concat": "^2.6.1",
