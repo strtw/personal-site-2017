@@ -1,4 +1,4 @@
-# My Personal Website / Portfolio
+# Student Website / Portfolio
 
 *[View Website](http://stuwood.surge.sh/dest/html/index.html)*
 
